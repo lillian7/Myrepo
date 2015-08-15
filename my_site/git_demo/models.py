@@ -4,7 +4,7 @@ from django.db import models
 # Create your models here.
 class Person(models.Model):
     user = models.ForeignKey(User)
-    age = models.IntegerField()
+    age = models.PositiveIntegerField()
 
     def __unicode__(self):
         return self.user.first_name
