@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block content %}
+    <form action="{% url 'git_demo:index' %}" method="post">
+        {% csrf_token %}
+    {{ form.as_table }}
+    {{ user_form.as_table}}
+    </form>
+{% endblock %}
